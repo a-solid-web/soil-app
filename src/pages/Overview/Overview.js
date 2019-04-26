@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RequestCard from '../../components/RequestCard';
+
 import Avatar from '../../components/Avatar';
+import RequestAvatar from '../../components/RequestAvatar';
+import RequestCard from '../../components/RequestCard';
 
 const Overview = ({ content }) => {
   return (
     <div>
       <RequestCard content="Hello RequestCard" />
-      <Avatar />
+      <RequestAvatar>
+        <Avatar />
+      </RequestAvatar>
     </div>
   );
 };

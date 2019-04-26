@@ -1,0 +1,19 @@
+.requestAvatar {
+    height: 76px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+}
+
+.requestUsername {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.requestParagraph {
+    margin-left: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
