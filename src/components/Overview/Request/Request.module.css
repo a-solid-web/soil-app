@@ -1,0 +1,9 @@
+.requestTab {
+    background-color: #E5E5E5;
+    width: 658px;
+}
+
+.requestTab > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
