@@ -7,16 +7,18 @@ import NavBar from './components/NavBar';
 
 import { LANDING, OVERVIEW } from './utils/routes';
 
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   return (
     <Router>
       <Route path={LANDING} component={NavBar} />
-      <Switch>
-        <Route exact path={LANDING} component={Landing} />
-        <Route exact path={OVERVIEW} component={Overview} />
-      </Switch>
+      <div className={styles.wrapper}>
+        <Switch>
+          <Route exact path={LANDING} component={Landing} />
+          <Route exact path={OVERVIEW} component={Overview} />
+        </Switch>
+      </div>
     </Router>
   );
 }
