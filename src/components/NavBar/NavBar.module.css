@@ -1,0 +1,48 @@
+@value variables: "../../style/variables.module.css";
+@value navbar-height, text-black from variables;
+
+.navbar {
+  width: 100%;
+  height: navbar-height;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.title {
+  color: text-black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.authentication {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 0px;
+  width: 200px;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 0px;
+  width: 400px;
+}
+
+.link {
+  text-decoration: none;
+  color: text-black;
+}

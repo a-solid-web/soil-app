@@ -1,16 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Landing from './pages/Landing';
 import Overview from './pages/Overview';
+import NavBar from './components/NavBar';
+
+import { LANDING, OVERVIEW } from './utils/routes';
 
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <Route to="/" component={Landing} />
-      <Route to="/overview" component={Overview} />
+      <Route path={LANDING} component={NavBar} />
+      <Switch>
+        <Route exact path={LANDING} component={Landing} />
+        <Route exact path="/overview/:variant" component={Overview} />
+      </Switch>
     </Router>
   );
 }
