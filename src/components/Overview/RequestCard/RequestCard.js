@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { Button, Card } from 'yoda-design-system';
 import styles from './RequestCard.module.css';
 
-const RequestCard = ({ content }) => {
+const RequestCard = ({ requestAction, className }) => {
   return (
-    <Card className={styles.cardContainer}>
-      <p>{content}</p>
+    <Card className={`${styles.cardContainer} ${className}`}>
+      <div className={`${styles.requestActionContainer}`}>
+        <p>{requestAction}</p>
+      </div>
       <div className={styles.buttonsContainer}>
         <Button variant="outlined" className={styles.acceptButton}>
           Accept
@@ -20,11 +22,13 @@ const RequestCard = ({ content }) => {
 };
 
 RequestCard.propTypes = {
-  content: PropTypes.string,
+  requestAction: PropTypes.string,
+  className: PropTypes.string,
 };
 
 RequestCard.defaultProps = {
-  content: 'Card content goes here',
+  requestAction: 'Action content goes here',
+  className: PropTypes.string,
 };
 
 export default RequestCard;

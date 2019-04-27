@@ -1,13 +1,23 @@
 .cardContainer {
     display: flex;
     justify-content: space-between;
-    max-width: 650px;
+    align-items: center;
+    min-height: 60px;
+}
+
+.textContentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    flex-shrink: 1;
+    word-wrap: break-word;
 }
 
 .buttonsContainer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .acceptButton {
