@@ -1,34 +1,52 @@
-import React, { useState } from 'react';
-import { withRouter, Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from 'yoda-design-system';
 
-import { LANDING } from '../../utils/routes';
+import { LANDING, REQUESTS, CONTACTS, APPS, DATA } from '../../utils/routes';
+import { locationShape, historyShape } from '../../utils/router-prop-types';
 
 import styles from './NavBar.module.css';
 
-const NavBar = ({ location }) =>
-  location.pathname === LANDING ? <NavBarNonAuth /> : <NavBarAuth />;
+const NavBar = ({ location: { pathname }, history }) =>
+  pathname === LANDING ? (
+    <NavBarNonAuth history={history} />
+  ) : (
+    <NavBarAuth history={history} />
+  );
 
 NavBar.propTypes = {
-  location: PropTypes.shape({
-    hash: PropTypes.string,
-    key: PropTypes.string,
-    pathname: PropTypes.string,
-    search: PropTypes.string,
-  }).isRequired,
+  location: locationShape.isRequired,
+  history: historyShape.isRequired,
 };
+
 const NavBarAuth = () => {
   return (
     <Card className={styles.navbar}>
-      <span className={styles.title}>Solid Web</span>
+      <span className={styles.title}>
+        <Link to={REQUESTS}>Solid Web</Link>
+      </span>
       <nav>
         <ul className={styles.tabs}>
-          <li>Overview</li>
-          <li>Contacts</li>
-          <li>Apps</li>
-          <li>Data</li>
+          <li>
+            <Link className={styles.link} to={REQUESTS}>
+              Overview
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.link} to={CONTACTS}>
+              Contacts
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.link} to={APPS}>
+              Apps
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.link} to={DATA}>
+              Data
+            </Link>
+          </li>
         </ul>
       </nav>
       <div>Avatar</div>
@@ -36,22 +54,33 @@ const NavBarAuth = () => {
   );
 };
 
-const NavBarNonAuth = () => {
+const NavBarNonAuth = ({ history }) => {
+  const handleClick = event => {
+    history.push(REQUESTS);
+  };
   return (
     <Card className={styles.navbar}>
       <span className={styles.title}>Solid Web</span>
       <nav>
         <ul className={styles.authentication}>
           <li>
-            <Link className={styles.link}>Login</Link>
+            <button type="button" className={styles.link} onClick={handleClick}>
+              Login
+            </button>
           </li>
           <li>
-            <Link className={styles.link}>Register</Link>
+            <button type="button" className={styles.link} onClick={handleClick}>
+              Register
+            </button>
           </li>
         </ul>
       </nav>
     </Card>
   );
+};
+
+NavBarNonAuth.propTypes = {
+  history: historyShape.isRequired,
 };
 
 export default NavBar;

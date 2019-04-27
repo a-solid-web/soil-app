@@ -15,7 +15,7 @@ function App() {
       <Route path={LANDING} component={NavBar} />
       <Switch>
         <Route exact path={LANDING} component={Landing} />
-        <Route exact path="/overview/:variant" component={Overview} />
+        <Route exact path={OVERVIEW} component={Overview} />
       </Switch>
     </Router>
   );
