@@ -1,19 +1,29 @@
+@value variables: "../../../style/variables.module.css";
+@value text-medium-grey from variables;
 .requestAvatar {
-    height: 76px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: transparent;
+  height: 76px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
 }
 
 .requestUsername {
-    font-weight: bold;
-    margin-right: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 5px;
 }
 
-.requestParagraph {
-    margin-left: 11px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.text {
+  margin-left: 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.wantsTo {
+  font-size: 12px;
+  vertical-align: text-bottom;
+  color: text-medium-grey;
 }

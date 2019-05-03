@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './RequestAvatar.module.css';
 
-import Avatar from '../Avatar';
+import Avatar from '../../Avatar';
 
 const RequestAvatar = ({ avatarImgUrl, username, className }) => {
   return (
     <div className={`${styles.requestAvatar} ${className}`}>
       <Avatar imgUrl={avatarImgUrl} />
-      <div className={styles.requestParagraph}>
+      <div className={styles.text}>
         <span className={styles.requestUsername}>{username}</span>
-        <span> wants to:</span>
+        <span className={styles.wantsTo}> wants to:</span>
       </div>
     </div>
   );
