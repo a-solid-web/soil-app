@@ -1,34 +1,32 @@
 .cardContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  padding: 23px 25px 23px 35px;
 }
 
 .textContentContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 50%;
-    flex-shrink: 1;
-    word-wrap: break-word;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  flex-shrink: 1;
+  font-size: 14px;
 }
 
 .buttonsContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.button {
+  min-height: 31px;
+  min-width: 75px;
+  padding: 1px 0px;
 }
 
 .acceptButton {
-    height: 40px;
-    min-width: 100px;
-    margin-right: 30px;
-    padding: 1px 0px;
-}
-
-.denyButton {
-    height: 40px;
-    min-width: 100px;
-    padding: 7px 0px;
+  margin-right: 25px;
 }
