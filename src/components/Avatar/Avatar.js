@@ -4,7 +4,7 @@ import styles from './Avatar.module.css';
 
 const Avatar = ({ imgURL, className }) => (
   <div className={`${styles.avatar} ${className}`}>
-    <img className={styles.avatarURL} src={imgURL} alt="sajas" />
+    {imgURL && <img className={styles.avatarURL} src={imgURL} alt="sajas" />}
   </div>
 );
 
@@ -14,8 +14,7 @@ Avatar.propTypes = {
 };
 
 Avatar.defaultProps = {
-  imgURL:
-    'https://www.va.gov/va_files/2014/responsive/images/slider/images/arrow-left.png',
+  imgURL: '',
   className: '',
 };
 
