@@ -1,6 +1,5 @@
 .requestTab {
-    background-color: #E5E5E5;
-    width: 658px;
+    background-color: transparent;
 }
 
 .requestTab > * {
