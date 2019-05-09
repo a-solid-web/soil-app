@@ -1,9 +1,0 @@
-@value variables: "../../style/variables.module.css";
-@value navbar-height from variables;
-
-.landing {
-  background-color: #F9FAFB;
-  width: 100vw;
-  height: 100vh;
-  margin-top: navbar-height;
-}

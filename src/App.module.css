@@ -1,0 +1,11 @@
+@value variables: "./style/variables.module.css";
+@value navbar-height from variables;
+
+.wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin-top: navbar-height;
+  display: flex;
+  justify-content: center;
+  background-color: #f9fafb;
+}

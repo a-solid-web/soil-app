@@ -28,22 +28,22 @@ const NavBarAuth = () => {
       <nav>
         <ul className={styles.tabs}>
           <li>
-            <Link className={styles.link} to={REQUESTS}>
+            <Link className={styles.tab} to={REQUESTS}>
               Overview
             </Link>
           </li>
           <li>
-            <Link className={styles.link} to={CONTACTS}>
+            <Link className={styles.tab} to={CONTACTS}>
               Contacts
             </Link>
           </li>
           <li>
-            <Link className={styles.link} to={APPS}>
+            <Link className={styles.tab} to={APPS}>
               Apps
             </Link>
           </li>
           <li>
-            <Link className={styles.link} to={DATA}>
+            <Link className={styles.tab} to={DATA}>
               Data
             </Link>
           </li>
