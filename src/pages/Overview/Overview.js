@@ -10,7 +10,7 @@ import styles from './Overview.module.css';
 /* eslint-disable no-console */
 
 const Overview = ({ content }) => {
-  const handleAccept = () => console.log('Accepted!');
+  const handleAccept = () => console.log('Accepted!!!');
   const handleDeny = () => console.log('Denied!');
 
   return (
